@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'ARBONNIE (1)';
+  src: url('ARBONNIE (1).eot');
+  src: url('ARBONNIE (1).woff2') format('woff2'),
+       url('ARBONNIE (1).eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ARBONNIE';
+  src: url('ARBONNIE.woff') format('woff'),
+       url('ARBONNIE.ttf') format('truetype'),
+       url('ARBONNIE.svg#ARBONNIE') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+

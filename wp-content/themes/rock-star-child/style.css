@@ -1,0 +1,709 @@
+/*
+ Theme Name:   Rock Star Theme Child
+ Theme URI:    http://example.com/rock-star-child/
+ Description:  Rock Star Child Theme - Rock Star
+ Author:       Hannah Jones
+ Author URI:   http://example.com
+ Template:     rock-star
+ Version:      1.0.0
+ Tags:         blog, one-column, two-columns, three-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, front-page-post-form, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
+ Text Domain:  rock-star-child
+*/
+
+/*Import all styles from parent theme*/
+@import url("../rock-star/style.css");
+
+
+
+/*Child styles*/
+
+html{
+  background: black;
+}
+
+/*Global Fonts*/
+
+@font-face {
+    font-family: 'arbonnie';
+    src: url('fonts/arbonnie/arbonnie.eot');
+    src: local('☺'),
+         url('fonts/arbonnie/arbonnie.woff') format('woff'), 
+         url('fonts/arbonnie/arbonnie.ttf') format('truetype'), 
+         url('fonts/arbonnie/arbonnie.svg#arbonnie') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+h1, h2, h3, h4, h5, h6, .site-title, .nav-menu a, .menu-toggle{
+  font-family: "arbonnie", Arial, sans-serif;
+  letter-spacing: 1px;
+}
+
+/*brand color*/
+mark, ins, .search-submit:hover, .search-submit:focus, .cttagcloud .ct-tag-cloud-wrap.box a:hover,
+.cttagcloud .ct-tag-cloud-wrap.rounded-corners a:hover, #breadcrumb-list a:hover,
+#breadcrumb-list a:focus,
+.breadcrumb-current, .controls a:hover,
+.controls a:focus {
+	background-color: #eadd2c;
+  
+}
+.widecolumn .mu_register .mu_alert {
+	border-color: #eadd2c;
+}
+.breadcrumb-current:after, #breadcrumb-list a:hover:after {
+	border-left-color: #eadd2c;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active, .btn-transparent:hover,
+.btn-transparent:focus, .wp-pagenavi span.current,
+.wp-pagenavi a:hover,
+.wp-pagenavi a:focus,
+#nav-below .nav-links span.current,
+#nav-below .nav-links a:hover,
+#nav-below .nav-links a:focus, #main #infinite-handle span button:hover,
+#main #infinite-handle span button:focus, .reply a:hover,
+.reply a:focus {
+	background-color: #eadd2c;
+	border-color: #eadd2c;
+}
+
+
+
+.site-title a:hover, .site-title a:focus, .main-navigation a:hover, .main-navigation a:focus, .main-navigation .current-menu-item > a, .main-navigation .current-menu-ancestor > a, .dropdown-toggle:hover, .dropdown-toggle:focus,.menu-toggle:hover,
+.menu-toggle:focus,.menu-toggle.toggled-on,
+.menu-toggle.toggled-on:hover,
+.menu-toggle.toggled-on:focus, .widget_calendar #wp-calendar a, .widget_calendar #wp-calendar #today, .ctgallerypostpageimage .entry-title a:hover, .ctgallerypostpageimage .genericon-picture:hover, .ctnewsletter .ct-newsletter-wrap #subbutton:hover, .site-title a:hover,
+.site-title a:focus, .main-slider .entry-container a, .main-slider .entry-title a:hover,
+.main-slider .entry-title a:focus, .cycle-pager span:hover,
+.cycle-pager span:focus,
+.cycle-pager span.cycle-pager-active, .news-ticker-label, .main-navigation li:hover > a, .main-navigation li.focus > a{
+  color: #eadd2c;
+  -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+.main-navigation .current-menu-item > a{
+  color: #a8232b;
+}
+
+
+
+
+/*global styles*/
+
+body.header-bg{
+  padding-top: 100px !important;
+}
+
+ul{
+  margin: 0;
+}
+
+section{
+  margin-bottom: 4rem;
+}
+
+.more-link{
+  padding: 10px 20px;
+  border: 1px solid #eadd2c;
+  text-align: center;
+  margin: 1rem auto !important;
+  color: #eadd2c;
+  font-weight: bold;
+  display: block;
+  width: 200px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  opacity: 1;
+}
+
+.more-link:hover{
+  opacity: 0.8;
+  color: #a8232b;
+  border-color: #a8232b;
+}
+
+
+/*header styles - global*/
+
+header{
+  font-weight: bold;
+}
+
+.menu-toggle{
+  font-size: 1.1rem;
+}
+
+.site-description{
+  font-weight: normal;
+}
+
+.main-navigation a{
+  font-size: 1.5rem;
+}
+
+#news-ticker, .header-image-slider{
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 320px){
+  .site-description{
+    display: none;
+  }
+}
+
+/*footer styles - global*/
+
+#custom_html-5, #nav_menu-4{
+  margin: 0;
+}
+
+/*Newsletter Signup*/
+.nf-form-fields-required {
+  display: none;
+}
+.nf-field-element{
+  font-size: 1.15rem;
+}
+#nf-form-2-cont{
+  padding: 1rem;
+  border: 1px solid white;
+}
+#nf-form-2-cont:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#prefooter-left nf-field:nth-child(2){
+  width: 75%;
+  float: left;
+}
+
+#prefooter-left nf-field:nth-child(3){
+  float: left;
+  width: 25%;
+}
+
+#nf-field-6{
+  color: white;
+  background-color: #333;
+  font-size: 1rem;
+  text-transform: capitalize;
+  text-align: center;
+  border: 1px solid #333;
+  border-radius: 3px;
+}
+
+#nf-field-6:hover{
+  border-color: #fff;
+}
+
+
+/* Twitter Feed */
+.twitter-feed{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.widget-title{
+  text-align: left;
+  display: inline;
+  font-size: 1.25rem;
+  padding-left: 0.5rem;
+}
+.tweets, .tweets li{
+  display: inline;
+  margin-left: 0;
+}
+
+/*social links*/
+.menu-social-media-menu-container{
+  margin: 0 auto;
+}
+
+#menu-social-media-menu{
+  text-align: center;
+}
+
+#menu-item-102, #menu-item-103{
+  list-style: none;
+  display: inline;
+  padding: 0 1rem;
+}
+
+
+#menu-social-media-menu{
+  margin: 0;
+}
+
+.site-footer .widget-wrap .menu li:not(:last-child):after{
+  content: "";
+}
+
+#prefooter-center{
+  margin: 1rem auto 0;
+}
+
+/*larger screen - global footer styles*/
+@media screen and (min-width: 910px){
+  
+  #prefooter-left #nf-field-6{
+    padding: 0.75rem 1rem;
+  }
+  .prefooter-widget-wrapper{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient:horizontal;
+    -webkit-box-direction:normal;
+    -ms-flex-flow:row wrap;
+    flex-flow:row wrap;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 100%;
+    flex: 1 100%;
+  }
+
+  #prefooter-left, #prefooter-right{
+    padding: 0 0.75rem;
+    width: 50%;
+    -ms-flex:1;
+    -webkit-box-flex:1;
+    flex:1 auto;
+  }
+  
+  #prefooter-center{
+    display:block;
+  }
+
+  
+  #custom_html-2{
+    margin: 1rem auto;
+    padding-bottom: 0;
+  }
+
+}
+
+
+/*home page styles*/
+@media screen and (min-width: 910px)
+.home .site-content {
+    margin-top: 35px;
+}
+
+h2{
+  text-align: center;
+}
+
+/*home page featured work section*/
+.featured-work li a{
+  display: block;
+  text-align: center;
+}
+
+
+.featured-work .artist-name:after{
+  content:"";
+  display:block;
+  width: 3rem;
+  margin: 0.5rem auto 0;
+  border-bottom:0.1rem solid white;
+}
+
+.featured-work .album-link p{
+  margin-bottom: 0.75rem;
+}
+
+  .featured-work .album-link{
+    padding: 10px 20px;
+    font-weight: bold;
+    text-align: center;
+    margin: 1rem auto;
+  }
+
+@media screen and (min-width: 768px){
+  .featured-work ul{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .featured-work li{
+    border: 1px solid white;
+    margin: 0.5rem;
+  }
+  .featured-work li:hover{
+    opacity: 0.8;
+  }
+
+}
+  
+
+/*home page services section*/
+
+.services ul{
+  margin: 0;
+}
+
+.services ul li{
+  width: 100%;
+  height: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.services ul li h3{
+  margin: 100px auto;
+  text-align: center;
+  vertical-align: middle;
+  text-align: center;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.services-specialties{
+  text-align: center;
+  padding-top: 1rem;
+}
+
+@media screen and (min-width: 910px){
+  .services ul{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  .services ul li{
+    width: 100%;
+    height: auto;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+  }
+}
+
+/*end home page styles*/
+
+
+/*404 Page*/
+
+.error404 #prefooter{
+  padding: 5rem 0 10rem;
+}
+.error404 form{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.error404 main, .error404 main .entry-title{
+  text-align: center;
+}
+
+.error404 #prefooter-left, .error404 #prefooter-right{
+  display: none;
+}
+
+
+
+
+/*about page styles*/
+.wp-image-87{
+  display: block;
+  margin: 0 auto;
+}
+.wp-image-187{
+  display: none;
+}
+
+@media screen and (min-width: 910px){
+  .about-wrapper{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .about-flex-70{
+    width: 70%;
+  }
+  .wp-image-87{
+    padding-left: 1rem;
+  }
+  .wp-image-187{
+    display:inherit;
+    float:left;
+    padding: 1rem 1rem 0.5rem 0;
+  }
+}
+
+
+
+/*contact page styles*/
+.page-id-31 #prefooter{
+  display: none;
+}
+
+body.page-id-31{
+  background: url(../../uploads/2017/08/hand-microphone-mic-hold-cropped-1678x1080.jpg) no-repeat right top !important;
+}
+
+.page-id-31 #primary{
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.5rem 0.5rem 0;
+}
+.page-id-31 #content p{
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.nf-error-msg, .ninja-forms-req-symbol{
+  color: #a8232b !important;
+}
+
+.rc-anchor-dark.rc-anchor-normal{
+  border-color: #eadd2c !important;
+}
+
+.page-id-31 .nf-field-element{
+  text-align: center;
+}
+
+.page-id-31 #nf-field-4{
+  background: transparent;
+  border: 1px solid #eadd2c;
+  text-align: center;
+  color: #eadd2c;
+  font-weight: bold;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.page-id-31 #nf-field-4:hover{
+  background: rgba(51, 51, 51, 0.4);
+}
+.page-id-31 h4{
+  text-align: center;
+  padding-top: 0.5rem;
+}
+
+@media screen and (min-width: 910px){
+  .page-id-31 #nf-form-1-cont{
+    width: 60%;
+  }
+  
+  .page-id-31 #primary{
+  background: none;
+  padding: 0;
+}
+  
+  .page-id-31 #content p, .page-id-31 .nf-field-element{
+    text-align: left;
+  }
+}
+
+.contact-details{
+  margin: 3rem 0;
+}
+
+
+/*Single Album Pages Styles*/
+
+.single-albums #primary{
+  width: 100%;
+  float: none;
+}
+
+/*
+.img-banner{
+  max-height: 8rem !important;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+*/
+@media screen and (min-width: 768px){
+/*
+  .img-banner{
+    max-height: 16rem !important;
+  }
+}
+*/
+
+/*
+.img-banner img{
+  -o-object-fit: none;
+  object-fit: none;
+  -o-object-position: bottom right;
+  object-position: bottom right;
+}
+*/
+
+.album-details img:nth-of-type(1){
+  display: block;
+  margin: 2rem auto;
+}
+
+.single-albums .album-details h2{
+  padding: 1rem 0 0;
+  margin-bottom: 0;
+}
+
+.single-albums .album-details h2:after{
+  content:"";
+  display:block;
+  width: 15rem;
+  margin: 0.5rem auto 0.75rem;
+  border-bottom:0.1rem solid white;
+}
+
+.album-subdetails{
+  list-style: none;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  -webkit-box-pack:center;
+  justify-content:center;
+}
+
+.album-subdetails li h5{
+  margin-bottom: 0;
+}
+
+.album-subdetails li:not(:last-child) h5:after{
+  content: '\2758';
+  display: inline;
+  text-align: center;
+  margin: 0 0.5rem;
+}
+
+
+.specs-list{
+  list-style: disc;
+  width: 80%;
+  margin: 0 auto 1.5rem;
+}
+
+.specs-list li{
+  margin-bottom: 1rem;
+}
+
+.paypal-link, .amazon-link{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.paypal-link form, .amazon-link a{
+  text-align: center;
+  width: 200px;
+  margin: 0 auto;
+}
+
+.purchase-btns .paypal-link form img{
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 910px){
+
+  .purchase-btns{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: top;
+    -ms-flex-align: top;
+    align-items: top;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .amazon-link{
+    width: 200px;
+  }
+  .amazon-link a img{
+    margin: 0 !important;
+  }
+}
+
+
+.album-photos img {
+  display: block;
+  margin: 1rem auto;
+}
+@media screen and (min-width: 768px){
+  .album-photos{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    max-width: 80%;
+    margin: 1rem auto;
+  }
+}
+
+/*Album Archive Page Styles*/
+
+.all-albums{
+  text-align: center;
+}
+
+.post-type-archive-albums h1{
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.post-type-archive-albums .album-link h3, .post-type-archive-albums .album-link h4, .post-type-archive-albums .album-subdetails h5{
+  margin: 0.75rem 0;
+}
+
+
+.post-type-archive-albums .all-albums{
+  margin: 0;
+}
+
+.post-type-archive-albums .all-albums>li{
+  display: block;
+  margin: 0 auto 10rem;
+  max-width: 300px;
+}
+
+@media screen and (min-width: 768px){
+  .post-type-archive-albums .all-albums>li{
+    max-width: 375px;
+  }
+}
+
+.post-type-archive-albums .all-albums>li div{
+  border: 1px solid white;
+  display: inline-block;
+}
+
+.post-type-archive-albums .all-albums>li div:hover{
+  opacity: 0.9;
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.4);
+  box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.4);
+}
+
+.post-type-archive-albums .album-link h3:after{
+  content:"";
+  display:block;
+  width: 3rem;
+  margin: 0.5rem auto 0;
+  border-bottom:1px solid white;
+}
